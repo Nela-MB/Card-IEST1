@@ -20,10 +20,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    min-height: 100vh
 
 }
 
@@ -71,7 +73,7 @@ body{
     flex-direction: column;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra para mejor visualización */
-    margin: 20px 0; /* Espacio superior e inferior de 20px */
+    margin: 5px 0; /* Espacio superior e inferior de 20px */
 
 
 
@@ -159,7 +161,7 @@ h2{
     }
 }
 
-a{
+/* a{
     display: block;
     position: relative;
     margin: 10px 0;
@@ -179,8 +181,21 @@ a{
     margin-bottom: 20px;
     opacity: 50%;
 
+} */
+a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 10px;
+    color: rgb(253, 253, 251);
+    background-color: rgb(15, 15, 15);
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(231, 231, 225);
+    opacity: 0.5;
 }
-.hijo1{
+.hijo1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -955,27 +970,89 @@ a{
 
 }
  */
- @media (max-width: 768px) {
+ 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem; /* Reduce el tamaño en pantallas pequeñas */
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 1.2rem; /* Reduce el tamaño en pantallas pequeñas */
+        font-size: 1.2rem;
     }
 
     .padre {
-        padding: 15px; /* Ajusta el padding para pantallas pequeñas */
+        padding: 15px;
     }
 }
 
 
 @media (max-width: 576px) {
-    .padre {
-        width: 95%; /* Aumenta el ancho en pantallas muy pequeñas */
+    body {
+        padding: 10px; /* Ajusta el padding del body para pantallas pequeñas */
     }
 
-    h1, h2, .texto-animado {
-        text-align: center; /* Centra el texto en pantallas pequeñas */
+    .padre {
+        width: 95%; /* Aumenta el ancho del contenedor padre */
+        max-width: 100%; /* Asegúrate de que ocupe el 100% del ancho disponible */
+        margin-top: 0; /* Elimina el margen superior */
+        padding: 15px; /* Ajusta el padding interno */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduce el tamaño de la fuente para h1 */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente para h2 */
+    }
+
+    .texto-animado {
+        font-size: 1em; /* Ajusta el tamaño de la fuente para el texto animado */
+    }
+
+    .hijo1, .hijo2 {
+        flex-direction: column; /* Cambia a columna para mejor visualización */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .insta, .face, .gmail, .web {
+        padding: 5px 10px; /* Ajusta el padding de los enlaces */
+        font-size: 0.9em; /* Reduce el tamaño de la fuente de los enlaces */
+    }
+}
+@media (min-width: 1400px) {
+    body {
+        /* Cambios específicos para pantallas grandes */
+        padding: 20px; /* Ajusta el padding del body si es necesario */
+    }
+
+    .padre {
+        width: 70%; /* Aumenta el ancho del contenedor padre */
+        max-width: 800px; /* Cambia el max-width si es necesario */
+        margin-top: 20px; /* Ajusta el margen superior */
+        padding: 40px; /* Aumenta el padding interno */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Aumenta el tamaño de la fuente para h1 */
+    }
+
+    h2 {
+        font-size: 2em; /* Aumenta el tamaño de la fuente para h2 */
+    }
+
+    .texto-animado {
+        font-size: 1.2em; /* Aumenta el tamaño de la fuente para el texto animado */
+    }
+
+    .hijo1, .hijo2 {
+        flex-direction: row; /* Cambia la dirección del flex para pantallas grandes */
+        justify-content: space-between; /* Espacio entre elementos */
+    }
+
+    .insta, .face, .gmail, .web {
+        padding: 10px 20px; /* Aumenta padding de los enlaces */
+        font-size: 1.1em; /* Aumenta el tamaño de la fuente de los enlaces */
     }
 }
